@@ -4,7 +4,7 @@ const express = require('express');
 
 const server = express();
 
-const PORT = 5200;
+const PORT = process.env.PORT || 5200;
 
 server.get('/test', (request, response) => {
     response.send("Yaaay Working!!!!");
