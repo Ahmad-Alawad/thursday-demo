@@ -6,6 +6,8 @@ const server = express();
 
 const PORT = process.env.PORT || 5200;
 
+server.use(express.static('./public'));
+
 server.get('/test', (request, response) => {
     response.send("Yaaay Working!!!!");
 });
